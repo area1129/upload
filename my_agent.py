@@ -1,5 +1,5 @@
 from game2048.agents import Agent
-
+from keras.models import load_model
 class myAgent(Agent):
     
     def __init__(self, game, display=None):
