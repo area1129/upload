@@ -15,11 +15,11 @@ class myAgent(Agent):
                 return i
 
     def transform_board(board):
-    	transformed_board = np.zeros((1,4,4,12))
-    	for p in range(4):
-        	for q in range(4):
-            	if board[p,q] == 0:
-                	transformed_board[0,p, q, 0] = 1
-            	else:
-                	transformed_board[0,p, q, int(np.log2(board[p,q]))] = 1
-    	return transformed_board
+        transformed_board = np.zeros((1,4,4,12))
+        for p in range(4):
+            for q in range(4):
+                if board[p,q] == 0:
+                    transformed_board[0,p, q, 0] = 1
+                else:
+                    transformed_board[0,p, q, int(np.log2(board[p,q]))] = 1
+        return transformed_board
